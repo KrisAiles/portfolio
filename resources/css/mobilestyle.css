@@ -1,0 +1,34 @@
+@media only screen and (max-width: 800px) {
+
+    #background-container {
+        min-width: 270px;
+    }
+
+    #page-container {
+        margin: 0;
+        min-width: 270px;
+    }
+
+    #page-content {
+        padding: 25px;
+        width: 90%;
+        min-width: 170px;
+    }
+    
+    #server-started {
+        width: 90%;
+    }
+
+    #server-started img {
+        width: 100%;
+    }
+
+    #server-offline {
+        width: 90%;
+    }
+
+    #server-offline img {
+        width: 100%;
+    }
+
+}
