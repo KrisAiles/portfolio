@@ -26,15 +26,24 @@
                     <div id="layer">
                         <section id="page-content">
                             <h1>Contact</h1>
-                            <form>
+                            <form id="contact-form" name="contact-form">
                                 <label for="name">Name: </label>
                                 <input id="name" name="name" type="text" required placeholder="Enter your name."><br>
                                 <label for="email">Email Address: </label>
                                 <input id="email" name="email" type="email" required placeholder="Enter your email address."><br>
                                 <label for="message">Message: </label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Enter your message."></textarea><br>
-                                <input id="submit" name="submit" type="submit">
+                                <input class="submit" name="submit" type="submit">
                             </form>
+                            <div id="form-output">
+                                <div id="form-output-content">
+                                </div>
+                                <button id="reset" class="submit" type="button">Reset</button>
+                            </div>
+                            <div id="contact-links">
+                                <img id="github" src="resources/images/Github-Logo.png" alt="Github logo"> <span>Github repository</span>
+                                <img id="linkedin" src="resources/images/linkedin-logo.png" alt="linkedin logo"> <span>Linkedin profile</span>                                  
+                            </div>
                         </section>  
                     </div>            
                 </main>

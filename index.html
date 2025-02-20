@@ -10,36 +10,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <script defer src="resources/javascript/index.js"></script>
     </head>
-    <body>
+    <body id="load-animation">
         <div id="background-container">
-            <section id="page-container">
+            <div id="page-container">
                 <header id="page-container-header">
-                    <div id="close-buttons"><img src="resources/images/close-buttons.png"></div>
-                    <div id="search-bar"><img src="resources/images/search-bar.png"></div>
+                    <div id="close-buttons"><img src="resources/images/close-buttons.png" alt="Close buttons"></div>
+                    <div id="search-bar"><img src="resources/images/search-bar.png" alt="Search bar"></div>
                 </header>
                 <nav>
                     <ul>
                         <li><span>Home</span></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
-                <main>
-                    <div id="home-background">
-                        <div id="layer">
-                            <div id="page-content">
-                                <p>Hi, my name is</p>
-                                <h1>Kris Ailes</h1>
-                                <p id="sub-heading">I love to write code</p>
-                                <p>I'm a fullstack web developer with a passion to create exceptional digital experiences</p>
-                            </div>  
-                        </div> 
-                    </div>            
+                <main id="home-background">
+                    <div id="layer">
+                        <section id="page-content">
+                            <p>Hi, my name is</p>
+                            <h1>Kris Ailes</h1>
+                            <p id="sub-heading">I love to write code</p>
+                            <p>I'm a fullstack web developer with a passion to create exceptional digital experiences</p>
+                        </section>  
+                    </div>           
                 </main>
-            </section> 
+            </div>
+        </div>
         <div id="server-offline">
-            <img src="resources/images/server-offline.png">
+            <img src="resources/images/server-offline.png" alt="Server offline">
         </div>
         <div id="server-started">
-            <img src="resources/images/server-started.png">
+            <img src="resources/images/server-started.png" alt="Server started">
         </div>
     </body>
 </html>
