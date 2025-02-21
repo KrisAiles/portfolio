@@ -11,21 +11,30 @@
         <script defer src="resources/javascript/index.js"></script>
     </head>
     <body id="contact">
+        <!-- BACKGROUND CONTAINER to control the size of the background image in relation to screen size -->
         <div id="background-container">
+            <!-- MAIN PAGE CONTAINER to give the site the effect of being a seperate window from the background -->
             <div id="page-container">
+                <!-- This is the HEADER section -->
                 <header id="page-container-header">
                     <div id="close-buttons"><img src="resources/images/close-buttons.png" alt="Close buttons"></div>
                     <div id="search-bar"><img src="resources/images/search-bar.png" alt="Search bar"></div>
                 </header>
+                <!-- This is the NAV section -->
                 <nav>
                     <ul>
+                        <!-- NAV list items are on the same line to prevent white space in the nav bar -->
                         <li><a href="home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a><li><span>Contact</span></li>
                     </ul>
                 </nav>
+                <!-- This is the MAIN section -->
                 <main id="contact-background">
+                    <!-- div to add a filter effect on top of the background image to make the text easier to read -->
                     <div id="layer">
+                        <!-- main page content -->
                         <section id="page-content">
                             <h1>Contact</h1>
+                            <!-- contact form -->
                             <form id="contact-form" name="contact-form">
                                 <label for="name">Name: </label>
                                 <input id="name" name="name" type="text" required placeholder="Enter your name."><br>
@@ -33,21 +42,27 @@
                                 <input id="email" name="email" type="email" required placeholder="Enter your email address."><br>
                                 <label for="message">Message: </label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Enter your message."></textarea><br>
+                                <label id="addition" for="solution"></label>
+                                <input id="solution" name="solution" type="number" min="2" max="18" placeholder="Please answer the question to submit" required><br>
                                 <input class="submit" name="submit" type="submit">
                             </form>
+                            <!-- hidden div to display what was submitted in the form -->
                             <div id="form-output">
                                 <div id="form-output-content">
                                 </div>
                                 <button id="reset" class="submit" type="button">Reset</button>
                             </div>
+                            <!-- links to other contact methods -->
                             <div id="contact-links">
-                                <img id="github" src="resources/images/Github-Logo.png" alt="Github logo"> <span>Github repository</span>
-                                <img id="linkedin" src="resources/images/linkedin-logo.png" alt="linkedin logo"> <span>Linkedin profile</span>                                  
+                                <img class="github" src="resources/images/Github-Logo.png" alt="Github logo"> <span>Github repository</span>
+                                <img class="linkedin" src="resources/images/linkedin-logo.png" alt="linkedin logo"> <span>Linkedin profile</span>                                  
                             </div>
                         </section>  
                     </div>            
                 </main>
             </div> 
         </div>
+        <!-- floating div to hold the back to the top button -->
+        <div id="back-to-top">Back to Top</div>
     </body>
 </html>

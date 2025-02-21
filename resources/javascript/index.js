@@ -10,29 +10,33 @@ const formInputId = document.getElementById("contact-form");
 const formOutputContainer = document.getElementById("form-output");
 const formOutputContent = document.getElementById("form-output-content");
 const clearOutput = document.getElementById("reset");
+const close = document.getElementsByClassName("close");
+const projectContainer = document.getElementsByClassName("project-container");
+const showFullscreenButton = document.getElementsByClassName("project-button");
+const backToTopButton = document.getElementById("back-to-top");
+const mathSolution = document.getElementById("addition");
 
-// Identify what page is active
+// Check to see if the page is index.html
 let loadAnimation;
 
 if (bodyId.id === "load-animation") {
   loadAnimation = true;
 } else {
   loadAnimation = false;
-}
-console.log(loadAnimation);
+};
 
 // Display main content if no animation set
 if (!loadAnimation) {
   mainContent.style.transform = "none";
-}
+};
 
 // Get screen size details
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 const fullScreenHeight = window.screen.height;
 const fullScreenWidth = window.screen.width;
-console.log(screenWidth);
-console.log(fullScreenWidth);
+//console.log(screenWidth);
+//console.log(fullScreenWidth);
 
 // Set the height of the background container based on the screen width/height ratio
 const setBackgroundHeight = Math.ceil(screenWidth / 100 * 50.5);
@@ -65,43 +69,153 @@ function pageLoadAnimation() {
   }, 2000);
 };
 
-
 if (loadAnimation) {
   pageLoadAnimation();
 };
-// This is the end of the page load animation sequence
 
-// Display form data
-formInput.addEventListener("submit", function (e) {
+// This is the start of display form data on contact page
+const num1 = Math.ceil(Math.random() * 9);
+const num2 = Math.ceil(Math.random() * 9);
+const solution = num1 + num2;
+
+if (bodyId.id === "contact") {
+  mathSolution.innerHTML = `What is ${num1} + ${num2}?`;
+  formInput.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log(this.solution.value);
+    if (Number(this.solution.value) === solution) {
+      formInputId.style.display = "none";
+    formOutputContainer.style.display = "flex";
+  
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      message: this.message.value
+    };
+  
+    const formOutput = `
+      <p>Name: ${formData.name}<br><br>
+      Email: ${formData.email}<br><br>
+      Message: ${formData.message}</p>
+    `;
+  
+    formOutputContent.innerHTML = formOutput;
+  
+    this.name.value = "";
+    this.email.value = "";
+    this.message.value = "";
+    this.solution.value = "";
+  } else {
+    alert(`${num1} + ${num2} isn't ${this.solution.value}`);
+  };
+});
+    
+  clearOutput.addEventListener("click", function (e) {
+    e.preventDefault();
+  
+    formInputId.style.display = "flex";
+    formOutputContainer.style.display = "none";
+    formOutputContent.innerHTML = "";
+  });
+};
+
+// This will close a fullscreen item by setting it's display to none and open project overviews by setting display to flex
+function hideFullScreen(e) {
   e.preventDefault();
 
-  formInputId.style.display = "none";
-  formOutputContainer.style.display = "flex";
+  const closeFullscreen = this.parentElement;
 
-  const formData = {
-    name: this.name.value,
-    email: this.email.value,
-    message: this.message.value
-  }
+  closeFullscreen.style.display = "none";
 
-  const formOutput = `
-    <p>Name: ${formData.name}<br><br>
-    Email: ${formData.email}<br><br>
-    Message: ${formData.message}</p>
-  `;
+  for (let i = 0; i < projectContainer.length; i++) {
+    projectContainer[i].style.display = "flex";
+  };
+};
 
-  formOutputContent.innerHTML = formOutput;
-
-  this.name.value = "";
-  this.email.value = "";
-  this.message.value = "";
+Array.from(close).forEach(function(item) {
+  item.addEventListener("click", hideFullScreen);
 });
 
-clearOutput.addEventListener("click", function (e) {
+// This will show layer on overview when mouse hovers
+function showLayer(e) {
   e.preventDefault();
 
-  formInputId.style.display = "flex";
-  formOutputContainer.style.display = "none";
-  formOutputContent.innerHTML = "";
+  const showLayer = this.lastElementChild;
+  showLayer.style.display = "flex";
+};
+
+Array.from(projectContainer).forEach(function(item) {
+  item.addEventListener("mouseover", showLayer);
 });
-// This is the end of display form data
+
+// This will hide layer on overview when mouse leaves
+function hideLayer(e) {
+  e.preventDefault();
+
+  const hideLayer = this.lastElementChild;
+  hideLayer.style.display = "none";
+};
+
+Array.from(projectContainer).forEach(function(item) {
+  item.addEventListener("mouseout", hideLayer);
+});
+
+// This will open a fullscreen item by setting it's display to flex and close project overviews by setting display to none
+function showFullscreen(e) {
+  e.preventDefault();
+  console.log(this);
+  console.log(this.parentElement.parentElement);
+  console.log(this.parentElement.parentElement.nextElementSibling);
+  const showFullscreen = this.parentElement.parentElement.nextElementSibling;
+  console.log(showFullscreen);
+  showFullscreen.style.display = "flex";
+  if (screenWidth <= mobileWidth) {
+    window.scroll({
+      top: 100,
+      left: 0,
+      behavior: "smooth",
+    });
+  } else {
+    window.scroll({
+      top: 300,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  for (let i = 0; i < projectContainer.length; i++) {
+    projectContainer[i].style.display = "none";
+  };
+};
+
+Array.from(showFullscreenButton).forEach(function(item) {
+  item.addEventListener("click", showFullscreen);
+});
+
+// This will control the back to top button
+let showOn;
+
+if (screenWidth <= mobileWidth) {
+  showOn = 25;
+} else {
+  showOn = 125;
+};
+
+function backToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+};
+
+backToTopButton.addEventListener("click", backToTop);
+
+function showBackToTopButton() {
+  if(document.documentElement.scrollTop > showOn || document.body.scrollTop > showOn) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  };
+};
+
+document.addEventListener("scroll", showBackToTopButton);

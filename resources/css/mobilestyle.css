@@ -1,5 +1,5 @@
 @media only screen and (max-width: 800px) {
-
+    /* -------------------- MOBILE SPECIFIC STYLING --------------------*/
     #background-container {
         min-width: 270px;
     }
@@ -31,4 +31,8 @@
         width: 100%;
     }
 
+    .close {
+        top: -40px;
+        right: 0;
+    }
 }

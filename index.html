@@ -11,19 +11,27 @@
         <script defer src="resources/javascript/index.js"></script>
     </head>
     <body id="load-animation">
+        <!-- BACKGROUND CONTAINER to control the size of the background image in relation to screen size -->
         <div id="background-container">
+            <!-- MAIN PAGE CONTAINER to give the site the effect of being a seperate window from the background -->
             <div id="page-container">
+                <!-- This is the HEADER section -->
                 <header id="page-container-header">
                     <div id="close-buttons"><img src="resources/images/close-buttons.png" alt="Close buttons"></div>
                     <div id="search-bar"><img src="resources/images/search-bar.png" alt="Search bar"></div>
                 </header>
+                <!-- This is the NAV section -->
                 <nav>
                     <ul>
+                        <!-- NAV list items are on the same line to prevent white space in the nav bar -->
                         <li><span>Home</span></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <!-- This is the MAIN section -->
                 <main id="home-background">
+                    <!-- div to add a filter effect on top of the background image to make the text easier to read -->
                     <div id="layer">
+                        <!-- main page content -->
                         <section id="page-content">
                             <p>Hi, my name is</p>
                             <h1>Kris Ailes</h1>
@@ -34,11 +42,13 @@
                 </main>
             </div>
         </div>
+        <!-- floating divs to hold the images for the page load animation and the back to the top button -->
         <div id="server-offline">
             <img src="resources/images/server-offline.png" alt="Server offline">
         </div>
         <div id="server-started">
             <img src="resources/images/server-started.png" alt="Server started">
         </div>
+        <div id="back-to-top">Back to Top</div>
     </body>
 </html>

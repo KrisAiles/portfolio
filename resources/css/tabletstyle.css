@@ -1,0 +1,22 @@
+@media only screen and (max-width: 1200px) {
+    /* -------------------- TABLET SPECIFIC STYLING --------------------*/
+    #background-container {
+        min-width: 450px;
+    }
+
+    #page-container {
+        margin: 50px 50px 100px 50px;
+        min-width: 380px;
+    }
+
+    #page-content {
+        padding: 50px;
+        width: 44%;
+        min-width: 270px;
+    }
+
+    .close {
+        top: 0;
+        right: -40px;
+    }
+}

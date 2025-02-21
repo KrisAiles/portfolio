@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1201px) {
-
+    /* -------------------- DESKTOP SPECIFIC STYLING --------------------*/
     #background-container {
         min-width: 450px;
     }
@@ -15,4 +15,8 @@
         min-width: 270px;
     }
 
+    .close {
+        top: 0;
+        right: -40px;
+    }
 }
