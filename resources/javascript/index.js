@@ -35,11 +35,9 @@ const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 const fullScreenHeight = window.screen.height;
 const fullScreenWidth = window.screen.width;
-//console.log(screenWidth);
-//console.log(fullScreenWidth);
 
 // Set the height of the background container based on the screen width/height ratio
-const setBackgroundHeight = Math.ceil(screenWidth / 100 * 50.5);
+const setBackgroundHeight = Math.ceil(fullScreenWidth / 100 * 50.5);
 backgroundContainer.style.minHeight = setBackgroundHeight + "px";
 
 // Set display to none to prevent it being seen till the transition starts
@@ -49,7 +47,7 @@ mainContent.style.animation = "none";
 const mobileWidth = 800;
 
 // Check if the site is being viewed on a mobile size display and if so remove header
-if(screenWidth <= mobileWidth) {
+if(fullScreenWidth <= mobileWidth) {
     mainContentHeader.style.display = "none";
     mainContent.style.borderRadius = "0 0 10px 10px";
 };
@@ -169,7 +167,7 @@ function showFullscreen(e) {
   const showFullscreen = this.parentElement.parentElement.nextElementSibling;
   console.log(showFullscreen);
   showFullscreen.style.display = "flex";
-  if (screenWidth <= mobileWidth) {
+  if (fullScreenWidth <= mobileWidth) {
     window.scroll({
       top: 100,
       left: 0,
@@ -194,7 +192,7 @@ Array.from(showFullscreenButton).forEach(function(item) {
 // This will control the back to top button
 let showOn;
 
-if (screenWidth <= mobileWidth) {
+if (fullScreenWidth <= mobileWidth) {
   showOn = 25;
 } else {
   showOn = 125;
