@@ -330,6 +330,22 @@ main {
     text-shadow: 1px 1px 2px black;
 }
 
+.hover-layer a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+
+.hover-layer a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+
 .project-button {
     width: 40%;
     margin: 0 auto;
@@ -466,6 +482,22 @@ textarea {
 }
 
 #contact-links span a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+
+#contact-links span a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+
+#contact-links span a:hover {
     text-decoration: none;
     color: white;
     font-size: 16px;
