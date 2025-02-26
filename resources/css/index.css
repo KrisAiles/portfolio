@@ -322,6 +322,14 @@ main {
     padding: 0;
 }
 
+.hover-layer a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+
 .project-button {
     width: 40%;
     margin: 0 auto;
@@ -455,6 +463,14 @@ textarea {
 
 #contact-links span {
     padding: 10px;
+}
+
+#contact-links span a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
 }
 
 .submit {
