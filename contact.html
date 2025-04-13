@@ -45,7 +45,7 @@
                                 <textarea id="message" name="message" rows="5" required placeholder="Enter your message."></textarea><br>
                                 <!--<label id="addition" for="solution"></label>
                                 <input id="solution" name="solution" type="number" min="2" max="18" placeholder="Please answer the question to submit" required><br>-->
-                                <div class="g-recaptcha" data-sitekey="6LdZIhcrAAAAAB4nOXgUPHyzxgA2r1umOC1WBqIE"></div>
+                                <div class="g-recaptcha" data-sitekey="6LdZIhcrAAAAAB4nOXgUPHyzxgA2r1umOC1WBqIE" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry" data-error-callback="onRecaptchaError"></div>
                                 <input class="submit" name="submit" type="submit">
                             </form>
                             <!-- hidden div to display what was submitted in the form -->
