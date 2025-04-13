@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <script defer src="resources/javascript/index.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body id="contact">
         <!-- BACKGROUND CONTAINER to control the size of the background image in relation to screen size -->
@@ -44,6 +45,7 @@
                                 <textarea id="message" name="message" rows="5" required placeholder="Enter your message."></textarea><br>
                                 <!--<label id="addition" for="solution"></label>
                                 <input id="solution" name="solution" type="number" min="2" max="18" placeholder="Please answer the question to submit" required><br>-->
+                                <div class="g-recaptcha" data-sitekey="6LdZIhcrAAAAAB4nOXgUPHyzxgA2r1umOC1WBqIE"></div>
                                 <input class="submit" name="submit" type="submit">
                             </form>
                             <!-- hidden div to display what was submitted in the form -->
