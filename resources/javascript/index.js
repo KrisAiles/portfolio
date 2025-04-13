@@ -79,7 +79,7 @@ const solution = num1 + num2;
 if (bodyId.id === "contact") {
   mathSolution.innerHTML = `What is ${num1} + ${num2}?`;
   formInput.addEventListener("submit", function (e) {
-    e.preventDefault();
+    //e.preventDefault();
     console.log(this.solution.value);
     if (Number(this.solution.value) === solution) {
       formInputId.style.display = "none";
