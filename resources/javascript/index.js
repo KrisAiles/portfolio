@@ -76,10 +76,10 @@ const num1 = Math.ceil(Math.random() * 9);
 const num2 = Math.ceil(Math.random() * 9);
 const solution = num1 + num2;
 
-if (bodyId.id === "contact") {
+/*if (bodyId.id === "contact") {
   mathSolution.innerHTML = `What is ${num1} + ${num2}?`;
   formInput.addEventListener("submit", function (e) {
-    //e.preventDefault();
+    e.preventDefault();
     console.log(this.solution.value);
     if (Number(this.solution.value) === solution) {
       formInputId.style.display = "none";
@@ -115,7 +115,7 @@ if (bodyId.id === "contact") {
     formOutputContainer.style.display = "none";
     formOutputContent.innerHTML = "";
   });
-};
+};*/
 
 // This will close a fullscreen item by setting it's display to none and open project overviews by setting display to flex
 function hideFullScreen(e) {
