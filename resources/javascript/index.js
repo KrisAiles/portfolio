@@ -72,11 +72,11 @@ if (loadAnimation) {
 };
 
 // This is the start of display form data on contact page
-const num1 = Math.ceil(Math.random() * 9);
+/*const num1 = Math.ceil(Math.random() * 9);
 const num2 = Math.ceil(Math.random() * 9);
 const solution = num1 + num2;
 
-/*if (bodyId.id === "contact") {
+if (bodyId.id === "contact") {
   mathSolution.innerHTML = `What is ${num1} + ${num2}?`;
   formInput.addEventListener("submit", function (e) {
     e.preventDefault();

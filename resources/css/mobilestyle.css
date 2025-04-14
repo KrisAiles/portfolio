@@ -1,18 +1,18 @@
 @media only screen and (max-width: 800px) {
     /* -------------------- MOBILE SPECIFIC STYLING --------------------*/
     #background-container {
-        min-width: 270px;
+        min-width: 16.875rem;
     }
 
     #page-container {
         margin: 0;
-        min-width: 270px;
+        min-width: 16.875rem;
     }
 
     #page-content {
-        padding: 25px;
+        padding: 1.5625rem;
         width: 90%;
-        min-width: 170px;
+        min-width: 10.625rem;
     }
     
     #server-started {
@@ -32,7 +32,11 @@
     }
 
     .close {
-        top: -40px;
+        top: -2.5rem;
         right: 0;
+    }
+
+    .large-project-container span a {
+        font-size: 1.125rem;
     }
 }
