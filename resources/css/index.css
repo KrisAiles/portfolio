@@ -3,10 +3,17 @@
 @import url("mobilestyle.css");
 
 /* -------------------- UNIVERSAL STYLING --------------------*/
+* {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
     background-color: #191919;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding: 0;
